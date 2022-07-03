@@ -1,0 +1,283 @@
+/*!Шрифти*/
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap);
+
+@font-face {
+  font-family: "Cal Sans";
+  font-weight: 600;
+  src: url("/fonts/CalSans-SemiBold.woff2") format("woff2"),
+    url("/fonts/CalSans-SemiBold.woff") format("woff");
+}
+
+/*!Обнулення*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*-------------------------------------------------------*/
+
+/*!Налаштування шаблона */
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  font-family: "Poppins";
+  color: #666666;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*! ====================================================== */
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  flex: 1 1 auto;
+}
+
+.page__main {
+}
+
+/* ------------------------------------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.header__container {
+  display: flex;
+  gap: 131px;
+  align-items: center;
+  min-height: 153px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header__logo {
+}
+.header__menu {
+}
+
+.menu {
+}
+.menu__list {
+  display: flex;
+  gap: 56px;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.menu__item {
+}
+.menu__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------ */
+.main {
+}
+.main__container {
+  display: flex;
+}
+
+.main__content {
+  padding: 235px 10px 0 0;
+  flex: 0 1 54%;
+}
+.main__title {
+  font-family: "Cal Sans";
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 67px;
+  color: #121212;
+}
+.main__title span {
+  color: #FF6428;
+}
+.main__title:not(:last-child) {
+    margin: 0 0 16px 0;
+}
+.main__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 420px;
+}
+.main__text:not(:last-child) {
+  margin: 0 0 33px 0;
+}
+.main__actions {
+}
+.actions-main {
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+.actions-main__button {
+  padding: 18px 48px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #FF6428;
+  border-radius: 40px;
+  color: #FFF;
+}
+.actions-main__button:not(:last-child) {
+  margin: 0 40px 0 0;
+}
+
+.actions-main__icon:not(:last-child) {
+  margin: 0 27.76px 0 0;
+}
+
+.main__decor {
+  flex: 0 1 46%;
+}
+.main__image {
+  margin-right: -135px;
+  position: relative;
+}
+.main__image::after {
+  content:url("../img/decor-main/decor.svg");
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 36.2%;
+  bottom: -40px;
+}
+
+@media (max-width: 1150px) {
+  .main__image {
+  margin-right: -300px;
+}
+.header__container {
+  gap: 80px;
+}
+.menu__list {
+  gap: 36px;
+}
+.main__image::after {
+  right: 50%;
+  bottom: -40px;
+}
+}
+@media (max-width: 767.5px) {
+.main__decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.4;
+}
+.main__image::after {
+  right: 36.2%;
+  bottom: -40px;
+}
+.main__content {
+  padding: 175px 10px 0 0;
+  position: absolute;
+  z-index: 2;
+}
+  .main__content {
+  width: 500px;
+}
+.actions-main__button {
+  padding: 14px 38px;
+}
+
+}
+@media (max-width: 425.5px)  {
+}
+/* ------------------------------------------ */
